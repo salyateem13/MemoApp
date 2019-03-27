@@ -66,9 +66,17 @@ public class MainActivity extends AppCompatActivity {
         Spinner editPriority = (Spinner) findViewById(R.id.spinner1);
 
 
-            Toast.makeText(this,"You fucked up" + Integer.toString(id) , Toast.LENGTH_LONG).show();
 
 
+
+
+        if (currentMemo.getPriority().equals("High") ){
+            editPriority.setSelection(0);
+        }else if (currentMemo.getPriority().equals("Medium")){
+            editPriority.setSelection(1);
+        }else{
+            editPriority.setSelection(2);
+        }
 
 
     }
